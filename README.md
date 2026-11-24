@@ -39,13 +39,13 @@ systèmes réels.
 
 | # | Fichier | Domaine (portfolio) | Contenu | Sortie |
 |---|---------|--------------------|---------|--------|
-| 1 | `01_eda_dashboard.py` | 📊 Analyse de données & BI | EDA : histogrammes, boxplots, scatter + régression, corrélations, KPI mensuels | `01_eda_dashboard.png` |
-| 2 | `02_serie_temporelle.py` | 📊 Analyse & statistiques | Tendance, saisonnalité, ±2σ glissant, anomalies (z-score), heatmap calendaire | `02_serie_temporelle.png` |
-| 3 | `03_distributions.py` | 📊 Analyse & statistiques | Violin plots, ECDF (p50/p95/p99), QQ-plot, densités — latences d'API | `03_distributions.png` |
-| 4 | `04_monitoring_etl.py` | ⚙️ Data Engineering | Pipelines ETL/ELT : volumes par statut, percentiles vs SLA, taux d'échec, heatmap jour × heure | `04_monitoring_etl.png` |
-| 5 | `05_data_quality.py` | ⚙️ Qualité & automatisation | Manquants, complétude, outliers IQR, validation, doublons, fraîcheur des tables | `05_data_quality.png` |
-| 6 | `06_orchestration.py` | 🏗️ Architecture des données | Gantt de DAG façon Airflow + Sankey de lignage (flux entrants/sortants) | `06_orchestration.png` |
-| 7 | `07_monitoring_temps_reel.py` | ⚙️ Data Engineering / DevOps | Dashboard animé (`FuncAnimation`) : débit & latence d'un flux type Kafka | *(fenêtre interactive)* |
+| 1 | `01_eda_dashboard.py` | Analyse de données & BI | EDA : histogrammes, boxplots, scatter + régression, corrélations, KPI mensuels | `01_eda_dashboard.png` |
+| 2 | `02_serie_temporelle.py` | Analyse & statistiques | Tendance, saisonnalité, ±2σ glissant, anomalies (z-score), heatmap calendaire | `02_serie_temporelle.png` |
+| 3 | `03_distributions.py` | Analyse & statistiques | Violin plots, ECDF (p50/p95/p99), QQ-plot, densités — latences d'API | `03_distributions.png` |
+| 4 | `04_monitoring_etl.py` | Data Engineering | Pipelines ETL/ELT : volumes par statut, percentiles vs SLA, taux d'échec, heatmap jour × heure | `04_monitoring_etl.png` |
+| 5 | `05_data_quality.py` | Qualité & automatisation | Manquants, complétude, outliers IQR, validation, doublons, fraîcheur des tables | `05_data_quality.png` |
+| 6 | `06_orchestration.py` | Architecture des données | Gantt de DAG façon Airflow + Sankey de lignage (flux entrants/sortants) | `06_orchestration.png` |
+| 7 | `07_monitoring_temps_reel.py` | Data Engineering / DevOps | Dashboard animé (`FuncAnimation`) : débit & latence d'un flux type Kafka | *(fenêtre interactive)* |
 
 ##  Écosystème — liens avec mes projets
 
@@ -154,8 +154,8 @@ matplotlib.use("Agg")   # aucun écran requis ; export via fig.savefig()
 *Data · Architecture · Analytics — Des fondations solides pour mieux décider.*
 
 - 🌐 [Portfolio](https://merphy-data-architect-kqextfs52-fullstackflow-devs-projects.vercel.app/)
-- 💼 LinkedIn : [Merph-dev](https://www.linkedin.com/in/merph-dev) <!-- TODO: URL LinkedIn (lien du footer de ton portfolio) -->
-- 🐙 GitHub : [FullStackFlow-dev](https://github.com/FullStackFlow-dev) <!-- TODO: URL GitHub -->
+- LinkedIn : [Merph-dev](https://www.linkedin.com/in/merph-dev) <!-- TODO: URL LinkedIn (lien du footer de ton portfolio) -->
+- GitHub : [FullStackFlow-dev](https://github.com/FullStackFlow-dev) <!-- TODO: URL GitHub -->
 - 📧 Email : [merphy.softwareengineer@gmail.com](merphy.softwareengineer@gmail.com>) <!-- TODO: email -->
 
 **Formation continue :** Meta · IBM · Microsoft · DataCamp
@@ -164,7 +164,7 @@ matplotlib.use("Agg")   # aucun écran requis ; export via fig.savefig()
 
 ## Licence
 
-MIT — voir `LICENSE`. Données 100 % synthétiques : aucune donnée réelle ou confidentielle
+MIT - voir `LICENSE`. Données 100 % synthétiques : aucune donnée réelle ou confidentielle
 (même principe que le Data Lab : aucune connexion à une plateforme ou entreprise n'est utilisée).
 
-© 2026 — Merphy Mademba
+© 2026 - Merphy Mademba
