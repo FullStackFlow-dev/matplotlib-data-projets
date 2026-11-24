@@ -89,6 +89,7 @@ matplotlib-data-projets/
 ├── 05_data_quality.py
 ├── 06_orchestration.py
 ├── 07_monitoring_temps_reel.py
+├── hover_summaries.py
 ├── requirements.txt
 ├── README.md
 └── assets/                  # captures des figures pour ce README
@@ -114,6 +115,8 @@ pip install -r requirements.txt
 ```
 
 ## Utilisation
+
+Les résumés apparaissent au survol des graphiques dans une fenêtre Matplotlib interactive. Les PNG exportés et ceux affichés sur GitHub restent statiques.
 
 ```bash
 python 01_eda_dashboard.py           # → 01_eda_dashboard.png

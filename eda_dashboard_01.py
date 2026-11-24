@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FuncFormatter
+from hover_summaries import add_hover_summaries
 
 rng = np.random.default_rng(42)
 COLORS = ["#2563eb", "#f59e0b", "#10b981", "#ef4444", "#8b5cf6"]
@@ -76,6 +77,15 @@ ca_m = df.groupby("mois")["ca"].sum()
 ax.plot(ca_m.index, ca_m.values, marker="o", ms=4, color=COLORS[0])
 ax.fill_between(ca_m.index, ca_m.values, alpha=.15, color=COLORS[0])
 ax.tick_params(axis="x", rotation=30); ax.set_title("CA mensuel")
+
+add_hover_summaries(fig, {
+    axes[0, 0]: "La hauteur compte les ventes par tranche de chiffre d'affaires.\nLes traits rouge et noir indiquent moyenne et médiane.",
+    axes[0, 1]: "La boîte couvre la moitié centrale des CA de la région.\nLe trait marque la médiane; les points isolés sont atypiques.",
+    axes[0, 2]: "Chaque point est une vente: quantité en bas, CA à gauche.\nLa droite résume la tendance, sans prouver une causalité.",
+    axes[1, 0]: "La corrélation va de -1 à +1: elle indique le sens et la force du lien.\nUne corrélation ne prouve pas une relation de cause à effet.",
+    axes[1, 1]: "Chaque barre représente le CA total d'un produit.\nPlus elle est longue, plus le chiffre d'affaires est élevé.",
+    axes[1, 2]: "Chaque point correspond au CA total d'un mois.\nLa courbe permet de suivre son évolution dans le temps.",
+})
 
 fig.savefig("01_eda_dashboard.png", dpi=150, bbox_inches="tight")
 plt.show()

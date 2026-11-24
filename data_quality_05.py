@@ -2,6 +2,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from hover_summaries import add_hover_summaries
 
 rng = np.random.default_rng(5)
 plt.rcParams.update({"axes.spines.top": False, "axes.spines.right": False,
@@ -80,6 +81,15 @@ retard = rng.uniform(.2, 30, len(tables))
 ax.barh(tables, retard, color=["#ef4444" if r > 6 else "#10b981" for r in retard])
 ax.axvline(6, color="black", ls="--", lw=1, label="SLA fraîcheur : 6 h")
 ax.set_xlabel("Heures depuis ingestion"); ax.set_title("Fraîcheur des tables"); ax.legend(fontsize=8)
+
+add_hover_summaries(fig, {
+    axes[0, 0]: "Rouge indique une valeur manquante dans l'échantillon de 150 lignes.\nChaque colonne correspond à un champ du jeu de données.",
+    axes[0, 1]: "Chaque barre montre le pourcentage de valeurs renseignées.\nLa ligne pointillée fixe l'objectif de complétude à 95 %.",
+    axes[0, 2]: "La boîte résume les montants sur une échelle logarithmique.\nLes valeurs isolées sont les outliers détectés par la règle IQR.",
+    axes[1, 0]: "Les barres séparent les valeurs valides, invalides et manquantes.\nCompare leur répartition entre les différents champs.",
+    axes[1, 1]: "Chaque barre compte les doublons détectés ce jour-là.\nUne valeur nulle signifie qu'aucun doublon n'a été trouvé.",
+    axes[1, 2]: "La barre indique les heures depuis la dernière ingestion.\nAu-delà de la ligne des 6 h, le SLA de fraîcheur est dépassé.",
+})
 
 fig.savefig("05_data_quality.png", dpi=150, bbox_inches="tight")
 plt.show()

@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from matplotlib.patches import Patch
 from matplotlib.sankey import Sankey
+from hover_summaries import add_hover_summaries
 
 plt.rcParams.update({"axes.titleweight": "bold", "grid.alpha": 0.3})
 base = pd.Timestamp("2026-11-24 02:00")
@@ -55,6 +56,11 @@ for d in sankey.finish():
     for t in d.texts:
         t.set_fontsize(9)
 ax2.set_title("Lignage : volumes entrants / sortants du job de transformation")
+
+add_hover_summaries(fig, {
+    ax: "Chaque barre est un job: position = début, longueur = durée.\nLa couleur montre son statut; les flèches indiquent les dépendances.",
+    ax2: "Les flux API, base et fichiers alimentent la table propre.\nLa largeur représente le volume; les rejets sont montrés à part.",
+})
 
 fig.savefig("06_orchestration.png", dpi=150, bbox_inches="tight")
 plt.show()

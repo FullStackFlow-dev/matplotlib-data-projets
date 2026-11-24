@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from collections import deque
 from matplotlib.animation import FuncAnimation
+from hover_summaries import add_hover_summaries
 
 rng = np.random.default_rng()
 N = 120  # fenêtre glissante de 120 points
@@ -33,6 +34,11 @@ def update(frame):
         ax.set_xlim(buf_t[0], buf_t[-1] + 1)
     txt1.set_text(f"{debit:,.0f} msg/s"); txt2.set_text(f"{lat:.0f} ms")
     return line1, line2, txt1, txt2
+
+add_hover_summaries(fig, {
+    ax1: "Le débit mesure les messages traités par seconde.\nLa courbe suit les variations d'activité du flux.",
+    ax2: "La latence mesure le délai de traitement en millisecondes.\nAu-dessus de la ligne rouge, le seuil de 200 ms est dépassé.",
+})
 
 ani = FuncAnimation(fig, update, interval=400, blit=False)  # garder une référence à `ani` !
 plt.show()

@@ -2,6 +2,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from hover_summaries import add_hover_summaries
 
 rng = np.random.default_rng(11)
 plt.rcParams.update({"axes.spines.top": False, "axes.spines.right": False,
@@ -77,6 +78,15 @@ for s, c in C_STAT.items():
     ax.scatter(sub["rows"], sub["duree_s"], s=18, alpha=.6, color=c, label=s)
 ax.set_xlabel("Lignes traitées"); ax.set_ylabel("Durée (s)"); ax.set_yscale("log")
 ax.set_title("Durée vs volume (échelle log)"); ax.legend(fontsize=8)
+
+add_hover_summaries(fig, {
+    axes[0, 0]: "L'aire empilée montre le volume quotidien par statut.\nLa hauteur totale compare les lignes traitées chaque jour.",
+    axes[0, 1]: "p50 est la médiane; p95 et p99 indiquent les durées élevées.\nAu-dessus de la ligne grise, le SLA de 120 s est dépassé.",
+    axes[1, 0]: "Chaque barre donne la part des runs échoués ou relancés.\nLa ligne rouge marque le seuil d'alerte de 8 %.",
+    axes[1, 1]: "Chaque secteur représente la part d'un statut parmi les runs.\nLe nombre au centre indique le total observé.",
+    axes[2, 0]: "La couleur montre les échecs selon le jour et l'heure.\nPlus le rouge est foncé, plus les échecs sont nombreux.",
+    axes[2, 1]: "Chaque point représente un run; l'axe vertical est logarithmique.\nCompare sa durée au volume et à son statut.",
+})
 
 fig.savefig("04_monitoring_etl.png", dpi=150, bbox_inches="tight")
 plt.show()

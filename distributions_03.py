@@ -2,6 +2,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from statistics import NormalDist
+from hover_summaries import add_hover_summaries
 
 rng = np.random.default_rng(3)
 plt.rcParams.update({"axes.spines.top": False, "axes.spines.right": False,
@@ -50,6 +51,13 @@ ax = axes[1, 1]
 for (nom, v), c in zip(data.items(), COLORS):
     ax.hist(v, bins=40, density=True, alpha=.45, color=c, label=nom)
 ax.set_xlabel("Latence (ms)"); ax.set_title("Densités superposées"); ax.legend(fontsize=8)
+
+add_hover_summaries(fig, {
+    axes[0, 0]: "La largeur du violon indique où les latences sont concentrées.\nPlus il est large, plus les valeurs sont fréquentes à ce niveau.",
+    axes[0, 1]: "La courbe donne la part des requêtes sous chaque latence.\nÀ 0,95, on lit p95: 95 % des requêtes sont plus rapides.",
+    axes[1, 0]: "Les points proches de la diagonale suivent une loi normale.\nUn écart, surtout aux extrémités, révèle une autre distribution.",
+    axes[1, 1]: "Les courbes comparent la densité des latences par version.\nUne courbe plus à droite indique des réponses plus lentes.",
+})
 
 fig.savefig("03_distributions.png", dpi=150, bbox_inches="tight")
 plt.show()
