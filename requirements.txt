@@ -1,0 +1,8 @@
+# requirements.txt — matplotlib-data-projets
+# Testé avec Python 3.13 / 3.14 / 3.15 — recommandé : 3.14
+# Minimum requis : Python >= 3.11 (imposé par pandas 3.x et matplotlib 3.11)
+# Versions stables vérifiées sur PyPI le 24 novembre 2026
+
+numpy==2.5.5          # publié le 15 nov. 2026 — wheels cp313/cp314/cp315
+pandas==3.1.1         # publié le 4 nov. 2026  — wheels cp313/cp314/cp315
+matplotlib==3.11.2    # publié le 11 sept. 2026 — wheels cp313/cp314/cp315
