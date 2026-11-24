@@ -130,7 +130,6 @@ matplotlib.use("Agg")   # aucun écran requis ; export via fig.savefig()
 
 ## Aperçus
 
-<!-- Décommente après avoir copié tes .png dans assets/ :
 | EDA | Monitoring ETL |
 |-----|----------------|
 | ![EDA](assets/01_eda_dashboard.png) | ![ETL](assets/04_monitoring_etl.png) |
@@ -138,7 +137,6 @@ matplotlib.use("Agg")   # aucun écran requis ; export via fig.savefig()
 | Qualité des données | Orchestration |
 |---------------------|---------------|
 | ![Quality](assets/05_data_quality.png) | ![DAG](assets/06_orchestration.png) |
--->
 
 ## Roadmap
 

@@ -7,9 +7,9 @@ __pycache__/
 .env
 .env.*
 !.env.example
-01_eda_dashboard.png
-02_serie_temporelle.png
-03_distributions.png
-04_monitoring_etl.png
-05_data_quality.png
-06_orchestration.png
+/01_eda_dashboard.png
+/02_serie_temporelle.png
+/03_distributions.png
+/04_monitoring_etl.png
+/05_data_quality.png
+/06_orchestration.png
