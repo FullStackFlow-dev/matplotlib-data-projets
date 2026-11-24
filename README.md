@@ -6,10 +6,10 @@
 
 *« Je transforme les données en systèmes fiables : bases bien modélisées, pipelines lisibles et outils utiles à la décision. »*
 
-[![Python](https://img.shields.io/badge/Python-3.13%20%7C%203.14%20%7C%203.15-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![NumPy](https://img.shields.io/badge/NumPy-2.5.5-013243?logo=numpy&logoColor=white)](https://numpy.org/)
-[![pandas](https://img.shields.io/badge/pandas-3.1.1-150458?logo=pandas&logoColor=white)](https://pandas.pydata.org/)
-[![Matplotlib](https://img.shields.io/badge/Matplotlib-3.11.2-11557C)](https://matplotlib.org/)
+[![Python](https://img.shields.io/badge/Python-3.13%20%7C%203.14%20%7C%203.15-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=3776AB)](https://www.python.org/)
+[![NumPy](https://img.shields.io/badge/NumPy-2.5.5-013243?style=for-the-badge&logo=numpy&logoColor=white&labelColor=013243)](https://numpy.org/)
+[![pandas](https://img.shields.io/badge/pandas-3.1.1-150458?style=for-the-badge&logo=pandas&logoColor=white&labelColor=150458)](https://pandas.pydata.org/)
+[![Matplotlib](https://img.shields.io/badge/Matplotlib-3.11.2-11557C?style=for-the-badge&labelColor=11557C)](https://matplotlib.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Dakar%2C%20Sénégal-0ea5e9?logo=vercel&logoColor=white)](https://merphy-data-architect-kqextfs52-fullstackflow-devs-projects.vercel.app/)
 
