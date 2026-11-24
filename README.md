@@ -154,9 +154,9 @@ matplotlib.use("Agg")   # aucun écran requis ; export via fig.savefig()
 *Data · Architecture · Analytics — Des fondations solides pour mieux décider.*
 
 - 🌐 [Portfolio](https://merphy-data-architect-kqextfs52-fullstackflow-devs-projects.vercel.app/)
-- 💼 LinkedIn : <!-- TODO: ton URL LinkedIn (lien du footer de ton portfolio) -->
-- 🐙 GitHub : <!-- TODO: ton URL GitHub -->
-- 📧 Email : <!-- TODO: ton email -->
+- 💼 LinkedIn : [Merph-dev](https://www.linkedin.com/in/merph-dev) <!-- TODO: URL LinkedIn (lien du footer de ton portfolio) -->
+- 🐙 GitHub : [FullStackFlow-dev](https://github.com/FullStackFlow-dev) <!-- TODO: URL GitHub -->
+- 📧 Email : [merphy.softwareengineer@gmail.com](merphy.softwareengineer@gmail.com>) <!-- TODO: email -->
 
 **Formation continue :** Meta · IBM · Microsoft · DataCamp
 ✅ Certifié : Microsoft Python Developer · Data Engineer Python & SQL · PostgreSQL Administrator · Johns Hopkins (Coursera)
@@ -165,6 +165,6 @@ matplotlib.use("Agg")   # aucun écran requis ; export via fig.savefig()
 ## Licence
 
 MIT — voir `LICENSE`. Données 100 % synthétiques : aucune donnée réelle ou confidentielle
-(même principe que le Data Lab : aucune connexion à MIRAHTEC n'est utilisée).
+(même principe que le Data Lab : aucune connexion à une plateforme ou entreprise n'est utilisée).
 
 © 2026 — Merphy Mademba
