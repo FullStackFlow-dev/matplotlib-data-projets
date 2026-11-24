@@ -20,8 +20,8 @@
 ## À propos
 
 Collection de **7 scripts autonomes et reproductibles**, construite autour de mes trois
-profils principaux — **ingénieur de données · ingénieur de bases de données · architecte
-de données** — et de mes compétences d'**analyste de données Python & BI**.
+profils principaux - **ingénieur de données · ingénieur de bases de données · architecte
+de données** - et de mes compétences d'**analyste de données Python & BI**.
 
 Chaque script génère ses propres **données synthétiques** (seed fixe via `np.random.default_rng`) :
 aucun fichier externe requis, résultats 100 % reproductibles. C'est exactement la philosophie
@@ -41,29 +41,29 @@ systèmes réels.
 |---|---------|--------------------|---------|--------|
 | 1 | `01_eda_dashboard.py` | Analyse de données & BI | EDA : histogrammes, boxplots, scatter + régression, corrélations, KPI mensuels | `01_eda_dashboard.png` |
 | 2 | `02_serie_temporelle.py` | Analyse & statistiques | Tendance, saisonnalité, ±2σ glissant, anomalies (z-score), heatmap calendaire | `02_serie_temporelle.png` |
-| 3 | `03_distributions.py` | Analyse & statistiques | Violin plots, ECDF (p50/p95/p99), QQ-plot, densités — latences d'API | `03_distributions.png` |
+| 3 | `03_distributions.py` | Analyse & statistiques | Violin plots, ECDF (p50/p95/p99), QQ-plot, densités - latences d'API | `03_distributions.png` |
 | 4 | `04_monitoring_etl.py` | Data Engineering | Pipelines ETL/ELT : volumes par statut, percentiles vs SLA, taux d'échec, heatmap jour × heure | `04_monitoring_etl.png` |
 | 5 | `05_data_quality.py` | Qualité & automatisation | Manquants, complétude, outliers IQR, validation, doublons, fraîcheur des tables | `05_data_quality.png` |
 | 6 | `06_orchestration.py` | Architecture des données | Gantt de DAG façon Airflow + Sankey de lignage (flux entrants/sortants) | `06_orchestration.png` |
 | 7 | `07_monitoring_temps_reel.py` | Data Engineering / DevOps | Dashboard animé (`FuncAnimation`) : débit & latence d'un flux type Kafka | *(fenêtre interactive)* |
 
-##  Écosystème — liens avec mes projets
+##  Écosystème - liens avec mes projets
 
 Ce dépôt complète mes réalisations présentées sur mon portfolio :
 
-- **MIRAH-BI Urban Mobility Analytics** & **MIRAH-BI Test Platform** — les scripts 4, 5 et 6
+- **MIRAH-BI Urban Mobility Analytics** & **MIRAH-BI Test Platform** - les scripts 4, 5 et 6
   reproduisent les dashboards de monitoring, contrôles qualité et vues d'orchestration
   utilisés pour préparer, tester et valider les pipelines de la plateforme MIRAH-BI ;
-- **WAL Transit Engine — West Africa Logistics Analytics** — même organisation
+- **WAL Transit Engine - West Africa Logistics Analytics** - même organisation
   **Bronze / Silver / Gold** : le script 5 contrôle la qualité entre les couches,
   le script 6 visualise le lignage ;
-- **Dakar Weather Intelligence (DWI)** — le script 2 (séries temporelles + anomalies)
+- **Dakar Weather Intelligence (DWI)** - le script 2 (séries temporelles + anomalies)
   s'applique directement aux données météorologiques ;
-- **Pipeline ETL analytique** & **Automatisation ETL en Python** — les scripts 4 et 6
+- **Pipeline ETL analytique** & **Automatisation ETL en Python** - les scripts 4 et 6
   documentent visuellement l'exécution des jobs (Airflow, dbt, Snowflake) ;
-- **API métier avec FastAPI** — le script 3 compare les distributions de latences
+- **API métier avec FastAPI** - le script 3 compare les distributions de latences
   entre versions d'API ;
-- **Dashboard de ventes Power BI** — le script 1 est l'équivalent Python/EDA de
+- **Dashboard de ventes Power BI** - le script 1 est l'équivalent Python/EDA de
   l'analyse descriptive commerciale.
 
 ##  Compétences démontrées
@@ -96,14 +96,14 @@ matplotlib-data-projets/
 
 ## Installation
 
-> **Python 3.13, 3.14 ou 3.15** — recommandé : **3.14** (écosystème data le plus mature).
+> **Python 3.13, 3.14 ou 3.15** - recommandé : **3.14** (écosystème data le plus mature).
 > Minimum technique : 3.11 (imposé par pandas 3.x / Matplotlib 3.11).
 
 ```bash
 git clone https://github.com/<TON_PSEUDO>/matplotlib-data-projets.git   # TODO: URL GitHub
 cd matplotlib-data-projets
 
-# Environnement virtuel — choisir SA version
+# Environnement virtuel - choisir SA version
 py -3.14 -m venv .venv          # Windows (py launcher)
 # python3.14 -m venv .venv      # Linux / macOS
 
@@ -121,7 +121,7 @@ python 04_monitoring_etl.py          # → 04_monitoring_etl.png
 python 07_monitoring_temps_reel.py   # → animation (en local uniquement)
 ```
 
-**Mode headless (serveur, CI/CD, Docker)** — avant l'import de `pyplot` :
+**Mode headless (serveur, CI/CD, Docker)** - avant l'import de `pyplot` :
 
 ```python
 import matplotlib
@@ -149,9 +149,9 @@ matplotlib.use("Agg")   # aucun écran requis ; export via fig.savefig()
 
 ## 👤 Auteur
 
-**Merphy Mademba** — Ingénieur de données & architecte de bases de données · Dakar, Sénégal 🇸🇳
+**Merphy Mademba** - Ingénieur de données & architecte de bases de données · Dakar, Sénégal 🇸🇳
 
-*Data · Architecture · Analytics — Des fondations solides pour mieux décider.*
+*Data · Architecture · Analytics - Des fondations solides pour mieux décider.*
 
 - 🌐 [Portfolio](https://merphy-data-architect-kqextfs52-fullstackflow-devs-projects.vercel.app/)
 - LinkedIn : [Merph-dev](https://www.linkedin.com/in/merph-dev) <!-- TODO: URL LinkedIn (lien du footer de ton portfolio) -->
